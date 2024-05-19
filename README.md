@@ -42,8 +42,8 @@ We are now ready to start coding!
 
 # Setting Up the HTML
 Let's open the index.html file and start with this code:
-
-```<!DOCTYPE html>
+```
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,7 +58,8 @@ In the <head> element, the <meta> tag ensures that the app can be responsively r
 
 Next, add this code snippet to the <head> element:
 
-```<head>
+```
+<head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.55.2/phaser.min.js"></script>
   <script src="app.js"></script>
@@ -131,7 +132,7 @@ The physics system of our game; we're using 'arcade'.
 
 A scene object with the functions we want to use in it, including preload(), create(), and update().
 
-Let's now add the following code to the preload() function:
+Let's now add the following code to the `preload()` function:
 ```
 function preload() {
   this.load.image('background', 'assets/background.png');
@@ -181,7 +182,8 @@ It's now time to add those columns from Flappy Bird that descend from the sky an
 
 Inside the `app.js` file, add the following to the create() function:
 
-```const topColumns = this.physics.add.staticGroup({
+```
+`const topColumns = this.physics.add.staticGroup({
   key: 'column',
   repeat: 1,
   setXY: { x: 200, y: 0, stepX: 300 }
